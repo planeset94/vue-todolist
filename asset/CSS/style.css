@@ -47,5 +47,13 @@ button.add{
     border-radius: 10px;
 }
 .to-do-div{    
-    padding:0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+i{
+   
+    font-size: 14px;
+    margin-left: 5px;
 }
