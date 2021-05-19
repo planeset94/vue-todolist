@@ -7,6 +7,7 @@ const app = new Vue(
 
             newTask: '',
             editable: true,
+            check: false,
             listToDo: [
                 'Lavare i piatti',
                 'Fare esercizio',
@@ -29,6 +30,11 @@ const app = new Vue(
 
             },
 
+            checkTask(index) {
+                this.check = "true"
+
+
+            },
 
         },
 

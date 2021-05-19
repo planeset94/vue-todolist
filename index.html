@@ -28,12 +28,17 @@
             <h3><strong>Todo List</strong></h3>
 
             <div class="list" v-if="listToDo.length>0">
+                <!-- Con v-if, mostriamo i Task solo se la matrice che li contiene non è vuota  -->
+
                 <div v-for="(list,index) in listToDo" class="to-do-div">
-                    <span v-text="list" v-bind:contenteditable="editable"></span>
+                    <span v-text="list" v-bind:class="(check? 'text-crossed': '' "
+                        v-bind:contenteditable="editable"></span>
+                    <i class="fas fa-check-square" @click="checkTask(index)"></i>
                     <i class="fas fa-times-circle" @click="removeTask(index)"></i>
                 </div>
+
             </div>
-            <p class="no-task" v-else>Insert something to do</p>
+            <p class="no-task" v-else>Nulla da fare</p>
 
 
         </div>
