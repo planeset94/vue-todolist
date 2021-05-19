@@ -24,14 +24,17 @@
         </div>
 
 
-        <div class="container-todo">
+        <div class="white-container">
             <h3><strong>Todo List</strong></h3>
-            <div class="sub-todo">
-                <div v-for="list in listToDo" class="to-do-div">
+
+            <div class="list" v-if="listToDo.length>0">
+                <div v-for="(list,index) in listToDo" class="to-do-div">
                     <span v-text="list" v-bind:contenteditable="editable"></span>
-                    <i class="fas fa-times-circle"></i>
+                    <i class="fas fa-times-circle" @click="removeTask(index)"></i>
                 </div>
             </div>
+            <p class="no-task" v-else>Insert something to do</p>
+
 
         </div>
 

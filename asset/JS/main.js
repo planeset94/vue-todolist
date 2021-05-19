@@ -9,7 +9,7 @@ const app = new Vue(
             editable: true,
             listToDo: [
                 'Lavare i piatti',
-                'fare esercizio',
+                'Fare esercizio',
 
             ]
 
@@ -22,13 +22,21 @@ const app = new Vue(
                     this.newTask = ""
                 }
             },
+
+            removeTask(index) {
+                console.log(index);
+                this.listToDo.splice(index, 1)
+
+            },
+
+
         },
 
         mounted() {
             document.addEventListener('keydown', (e) => {
                 const key = e.key;
                 if (key === 'Enter') {
-                    app.addTask()
+                    this.addTask()
                 }
             })
 
