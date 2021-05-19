@@ -11,18 +11,10 @@ const app = new Vue(
             listToDo: [
                 'Lavare i piatti',
                 'Fare esercizio',
+                'Andare a letto',
 
             ],
-            completeList: [
-                'ciao',
-                'ciao',
-                'ciao',
-                'ciao',
-                'ciao',
-                'ciao',
-                'ciao',
-                'ciao',
-            ],
+            completeList: [],
 
         },
 
@@ -40,6 +32,25 @@ const app = new Vue(
                 this.listToDo.splice(index, 1)
 
             },
+
+            completeTask(index) {
+                let xTask = this.listToDo[index]
+                // if (!this.completeList.includes(xTask)) {
+                // console.log(xTask + " " + index)
+                this.completeList.unshift(xTask)
+                this.listToDo.splice(index, 1)
+                // }
+            },
+
+            returnTask(zindex) {
+                let zTask = this.completeList[zindex]
+                // console.log(zTask);
+                this.listToDo.unshift(zTask)
+                this.completeList.splice(zindex, 1)
+
+            }
+
+
 
 
 
