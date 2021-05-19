@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #b0c4de;
+}
+
+.container{
+    width: 30%;
+    margin: 10rem auto;
+
+}
+img{
+    padding:0 0 0.5rem 2rem;
+}
+
+.insert-text input{
+    height: 25px;
+
+}
+
+button.add{
+    padding:5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.container-todo{
+    width: 100%;
+    margin-top:1rem;
+
+    background-color: white;
+}
+
+.to-do-div{
+    
+    background-color: #d3d3d3;
+    padding: 0.5rem 0.4rem;
+
+}
