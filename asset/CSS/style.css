@@ -9,17 +9,29 @@ body{
 }
 
 .container{
-    width: 30%;
+    width: auto;
     margin: 10rem auto;
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
+
+}
+
+
+/* LOGO-INPUT SECTION  */
+
+.top-section{
+    width: 100%;
+    text-align: center;
 }
 img{
     width: 200px;
+ }
+.insert-text{
+    width: 100%;
 }
-
 .insert-text input{
-    width: 80%;
     height: 25px;
 
 }
@@ -29,43 +41,55 @@ button.add{
     border-radius: 5px;
     border: none;
 }
+.flex-container{
+    display: flex;
+}
 
-.white-container{
+.white-container, .completed{
     width: 100%;
-    margin-top: 1rem;
+    margin:1rem;
     border-radius: 1rem;
     text-align: left;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 2rem;
     background-color: white;
 }
+
+
+/* white-container */
 h3{
     margin-bottom: 0.6rem;
 }
-.list{
-    width: 100%;
+.task{
+    width: 250px;
     background-color: #d3d3d3;
     border-radius: 10px;
 }
+        /* SINGOLI TASK  */
 .to-do-div{    
-    padding: 0.5rem;
+    padding: 0.5rem;    
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.icon{
+    display: flex;
 }
 
 i{
-   
     font-size: 14px;
-    margin-left: 5px;
+    margin-left: 0.5rem;
 }
+
+
 
 .no-task{
     font-style: oblique;
 }
 
-.text-crossed{
-    text-decoration: line-through;
+/* COMPLETED LIST  */
+.completed{
+    padding: 1rem 2rem;
 }
-
 
 
 

@@ -7,12 +7,22 @@ const app = new Vue(
 
             newTask: '',
             editable: true,
-
+            check: false,
             listToDo: [
                 'Lavare i piatti',
                 'Fare esercizio',
 
-            ]
+            ],
+            completeList: [
+                'ciao',
+                'ciao',
+                'ciao',
+                'ciao',
+                'ciao',
+                'ciao',
+                'ciao',
+                'ciao',
+            ],
 
         },
 
@@ -31,12 +41,7 @@ const app = new Vue(
 
             },
 
-            checkTask(index) {
-                // index.classList.add("text-crossed");
-                var x = this.listToDo[index]
-                console.log(x);
-                x.join()
-            },
+
 
         },
 

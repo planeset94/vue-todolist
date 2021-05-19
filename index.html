@@ -16,35 +16,54 @@
 <body>
     <div id="root" class="container">
 
-        <img src="./asset/IMG/logo.png" alt="logo boolean carears">
 
-        <div class="insert-text">
-            <input type="text" v-model="newTask" placeholder="Type your list">
-            <button v-on:click="addTask" class="add">Add</button>
+        <div class="top-section">
+            <img src="./asset/IMG/logo.png" alt="logo boolean carears">
+
+            <div class="insert-text">
+                <input type="text" v-model="newTask" placeholder="Type your list">
+                <button v-on:click="addTask" class="add">Add</button>
+            </div>
+
+
+
         </div>
 
+        <div class="flex-container">
 
-        <div class="white-container">
-            <h3><strong>Todo List</strong></h3>
+            <div class="white-container">
+                <h3><strong>Todo List</strong></h3>
 
-            <div class="list" v-if="listToDo.length>0">
-                <!-- Con v-if, mostriamo i Task solo se la matrice che li contiene non è vuota  -->
+                <div class="task" v-if="listToDo.length>0">
+                    <!-- Con v-if, mostriamo i Task solo se la matrice che li contiene non è vuota  -->
 
-                <div v-for="(list,index) in listToDo" class="to-do-div">
-                    <span v-text="list" v-bind:contenteditable="editable"></span>
-                    <i class="fas fa-check-square" @click="checkTask(index)"></i>
-                    <i class="fas fa-times-circle" @click="removeTask(index)"></i>
+                    <div class="to-do-div" v-for="(list,index) in listToDo">
+                        <span v-text="list" v-bind:contenteditable="editable"></span>
+                        <div class="icon">
+                            <i class="fas fa-check-square"></i>
+                            <i class="fas fa-times-circle" @click="removeTask(index)"></i>
+                        </div>
+                    </div>
+
                 </div>
+                <p class="no-task" v-else>Nulla da fare</p>
+
 
             </div>
-            <p class="no-task" v-else>Nulla da fare</p>
+
+
+
+            <!-- <div class="completed">
+                <div v-for="(doneTask,zindex) in completeList">
+                    <span v-text="doneTask"></span>
+                </div>
+            </div> -->
+
+
+
 
 
         </div>
-
-
-
-
 
 
 
