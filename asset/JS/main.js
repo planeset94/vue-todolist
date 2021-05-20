@@ -48,6 +48,9 @@ const app = new Vue(
                 this.listToDo.unshift(zTask)
                 this.completeList.splice(zindex, 1)
 
+
+
+
             }
 
 
@@ -56,15 +59,7 @@ const app = new Vue(
 
         },
 
-        mounted() {
-            document.addEventListener('keydown', (e) => {
-                const key = e.key;
-                if (key === 'Enter') {
-                    this.addTask()
-                }
-            })
 
-        }
 
 
     }

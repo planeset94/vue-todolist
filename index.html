@@ -21,11 +21,9 @@
             <img src="./asset/IMG/logo.png" alt="logo boolean carears">
 
             <div class="insert-text">
-                <input type="text" v-model="newTask" placeholder="Type your list">
+                <input type="text" v-model="newTask" @keyup.enter="addTask" placeholder="Type your list">
                 <button v-on:click="addTask" class="add">Add</button>
             </div>
-
-
 
         </div>
 
@@ -38,7 +36,7 @@
                     <!-- Con v-if, mostriamo i Task solo se la matrice che li contiene non è vuota  -->
 
                     <div class="to-do-div" v-for="(list,index) in listToDo">
-                        <span v-text="list" v-bind:contenteditable="editable"></span>
+                        <input type="text" v-model="listToDo[index]">
                         <div class="icon">
                             <i class="fas fa-check-square" @click="completeTask(index)"></i>
                             <i class="fas fa-times-circle" @click="removeTask(index)"></i>
